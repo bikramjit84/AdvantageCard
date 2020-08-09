@@ -1,7 +1,7 @@
 
 # Assumption:
 1. Use OKTA (https://developer.okta.com/) for oauth2
-2. When someone is checkout, it lauch the "http://localhost:4200/login", it lauch the login screen of the bank via okta
+2. When user wants to pay, it lauches "http://localhost:4200/login" the login screen of the bank via okta
 3. Internalization is implemented using  "ngx-translate" npm module. 
 4. For simplicity, it is reading the browser language
 
@@ -12,7 +12,7 @@
 4. User enters the credential, and it shown with the list of bank card informations.
   The card detail of the user is stored in a file "src\assets\cardDetail.json"
 5. Logic to implement the order of card detail to be displayed in the card detail is implemented in "src\app\components\card-payment\card-payment.component.ts"
-6. 
+
 
 
 # Internalization
