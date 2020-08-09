@@ -1,0 +1,66 @@
+[
+    {
+        "name":"Bank Of America",
+        "cardNumber":"XXXXXXXXXXXX1234",
+        "type": "Gold",
+        "score": 30
+    },
+    {
+        "name":"Bank Of America",
+        "cardNumber":"XXXXXXXXXXXX1236",
+        "type": "Silver",
+        "score": 20
+    },
+    {
+        "name":"Bank Of America",
+        "cardNumber":"XXXXXXXXXXXX1237",
+        "type": "Gold",
+        "score": 10
+    },
+    {
+        "name":"Advanatage Card",
+        "cardNumber":"XXXXXXXXXXXX1238",
+        "type": "Platinium",
+        "score": 1
+    },
+    {
+        
+        "name":"Advantage Card",
+        "cardNumber":"XXXXXXXXXXXX8910",
+        "type": "Platinium",
+        "score": 1
+    },
+    {
+        
+        "name":"Chase",
+        "cardNumber":"XXXXXXXXXXXX1211",
+        "type": "Gold",
+        "score": 10
+    },
+    {
+        
+        "name":"Chase",
+        "cardNumber":"XXXXXXXXXXXX1212",
+        "type": "Gold",
+        "score": 50
+    },
+    {
+        "name":"Chase",
+        "cardNumber":"XXXXXXXXXXXX1213",
+        "type": "Gold",
+        "score": 60
+    },
+    {
+        "name":"Advantage Card",
+        "cardNumber":"XXXXXXXXXXXX1214",
+        "type": "Platinium",
+        "score": 60
+    },
+    {
+        
+        "name":"Chase",
+        "cardNumber":"XXXXXXXXXXXX1215",
+        "type": "Silver",
+        "score": 70
+    } 
+]

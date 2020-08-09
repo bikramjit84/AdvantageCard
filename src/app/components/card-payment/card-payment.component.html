@@ -1,0 +1,33 @@
+  
+
+  <div class="row pay">
+   <div class="col-11" *ngIf="selectCard" class="alert float-center alert-danger">
+    {{ 'select.card' | translate }}
+  </div>
+  </div>
+  
+<div class="row">
+    
+    <div class="col-sm-3"  *ngFor="let card of cardDetailList; index as i;">
+      <div class="card">
+        <div class="card-body cardInfo" >
+          
+           <input type="radio" value="{{i}}" name="selectedBankIndex" [(ngModel)]="selectedBankIndex" (click)="removeErrorMessage()"> 
+           
+          <h5 class="card-title text-center text-white">{{card.name}}</h5>
+          <h6 class="card-subtitle  mb-2   text-left text-white">{{'card.number' | translate}} {{card.cardNumber}}</h6>
+          <h6 class="card-subtitle  mb-2   text-left text-white">{{'card.points' | translate}} {{card.score}}</h6>
+          <h6 class="card-subtitle  mb-2   text-left text-white">{{'card.type' | translate}} {{card.type}}</h6>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div class="row">
+     <div class="col-11">
+      
+      <input type="button" class="btn float-right pay btn-primary" value="Pay" (click)="pay()">
+    </div>
+ </div>
+ 
+ 
+ 

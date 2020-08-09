@@ -1,0 +1,16 @@
+{ 
+    
+    "login.btn": "(FR) Log in",
+    "login.bank": "(FR) Login to your bank",
+    "login.error": "(FR) Login is not successful.",
+"username.required": "(FR) User name is required.",
+"pwd.required": "(FR) Password name is required.",
+"username.min": "(FR) User name must be at least 4 character long.",
+"pwd.min": "(FR) Password name must be at least 5 character long.",
+"select.card" : "(FR) Please select a card",
+"card.number": "(FR) No",
+"card.points": "(FR) Points",
+"card.type": "(FR) Type",
+"payment.result": "(FR) Payment successful and redirecting back to the Merchant website. Do not close or refresh the browser",
+"popup.ok" : "(FR) OK"
+ }

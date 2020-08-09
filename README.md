@@ -1,27 +1,29 @@
-# BankUiApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.4.
+# Assumption:
+1. Use OKTA (https://developer.okta.com/) for oauth2
+2. When someone is checkout, it lauch the "http://localhost:4200/login", it lauch the login screen of the bank via okta
+3. Internalization is implemented using  "ngx-translate" npm module. 
+4. For simplicity, it is reading the browser language
 
-## Development server
+# Flow:
+1. The application uses 'OKTA' to simulate bank login using oauth2
+2. The user is setup by admin of okta which is used to login to the application
+3. When someone checkout, it lauches the "http://localhost:4200/login", it lauch the login screen of the bank via okta
+4. User enters the credential, and it shown with the list of bank card informations.
+  The card detail of the user is stored in a file "src\assets\cardDetail.json"
+5. Logic to implement the order of card detail to be displayed in the card detail is implemented in "src\app\components\card-payment\card-payment.component.ts"
+6. 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+# Internalization
+1. Two files are placed under "src\assets\i18n" folder to support "en" & "fr"
+2. Need to install npm translate module
+npm install @ngx-translate/core @ngx-translate/http-loader
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# OAUTH2
+1. Register to https://developer.okta.com/ for a free account
+2. Run the below npm
+   npm i @okta/okta-auth-js
+3. Replcate the domain name (YOUR_OKTA_DOMAIN) and client id (YOUR_OKTA_CLIENTID) in the file "src\app\services\authentication.service.ts"
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+ 

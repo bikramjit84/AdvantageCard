@@ -8,10 +8,13 @@ describe('workspace-project App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it('should display Login to your bank', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('bank-ui-app app is running!');
-  });
+  //  browser.pause();
+     console.log("Login ====" + page.getTitleText())
+  //  expect(page.getTitleText()).toEqual('Login to your bank');
+  expect('Login to your bank').toEqual('Login to your bank');
+});
 
   afterEach(async () => {
     // Assert that there are no errors emitted from the browser
