@@ -11,6 +11,7 @@ import { CardPaymentComponent } from './components/card-payment/card-payment.com
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PaymentResultComponent } from './components/payment-result/payment-result.component';
+import { LocalStorageModule } from 'angular-2-local-storage';
  
 export function TranslationLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -21,7 +22,8 @@ export function TranslationLoaderFactory(http: HttpClient) {
     AppComponent,
     LoginComponent,
     CardPaymentComponent,
-    PaymentResultComponent 
+    PaymentResultComponent,
+ 
   ],
   imports: [
     BrowserModule,
@@ -29,6 +31,10 @@ export function TranslationLoaderFactory(http: HttpClient) {
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    LocalStorageModule.forRoot({
+      prefix: 'bank-ui',
+      storageType: 'localStorage'
+    }),
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader, 

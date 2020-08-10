@@ -1,4 +1,13 @@
 
+.header {
+    height: 5%;
+}
+.footer {
+    height: 5%;
+}
+.bodyHeight {
+    height: 90%;
+}
 .topMargin {
     margin-top: 50px;
 }

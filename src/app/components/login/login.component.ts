@@ -37,14 +37,10 @@ export class LoginComponent implements OnInit {
       username: ['', [Validators.required,     Validators.minLength(4)]],
       password: ['', [Validators.required,      Validators.minLength(5)]]
     });
-
-    if (await this.authService.checkAuthenticated()) {
-      console.log("return url ", this.returnUrl);
-      await this.router.navigate([this.returnUrl]);
-    }
+ 
   }
 
-  async onSubmit() {
+    onSubmit() {
     this.loginInvalid = false;
        try {
           if (this.form.invalid) {
@@ -52,7 +48,9 @@ export class LoginComponent implements OnInit {
          }
         const username = this.form.get('username').value;
         const password = this.form.get('password').value;
-         await this.authService.login(username, password);
+           this.authService.login(username, password);
+           this.router.navigate([this.returnUrl]);
+
       } catch (err) {
         this.loginInvalid = true;
       }
