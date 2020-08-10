@@ -1,4 +1,40 @@
-body,html{
-    margin:10px; 
-    height:100%;
-  }
+ 
+html{
+  height: 100%
+}
+
+body{
+  display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+ 
+
+header {
+height: 50px;
+}
+
+ 
+footer {
+
+  height: 25px;
+  
+}
+
+ 
+
+.container {
+
+    padding: 1em;
+    max-width:90%;
+    flex :1;
+    width:99%;
+    margin: auto;
+    /*
+
+     background-color:aquamarine;
+
+     */
+
+}
