@@ -4,6 +4,6 @@ export enum LocaleConstants {
     USERNAME_REQUIRED = "username.required",
     PWD_REQUIRED = "pwd.required",
     USERNAME_MIN = "username.min",
-    PWD_MIN = "username.min"
+    PWD_MIN = "pwd.min" 
   }
   

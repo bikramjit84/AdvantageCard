@@ -16,10 +16,10 @@ export class LoginComponent implements OnInit {
    userNameMinLength: LocaleConstants.USERNAME_MIN = LocaleConstants.USERNAME_MIN;
   
    pwdMinLength: LocaleConstants.PWD_MIN = LocaleConstants.PWD_MIN;
-   loginBtn: LocaleConstants.LOGIN_BTN = LocaleConstants.LOGIN_BTN
-   form: FormGroup;
+   loginBtn: LocaleConstants.LOGIN_BTN = LocaleConstants.LOGIN_BTN;
+    form: FormGroup;
 
-  public loginInvalid: boolean;
+  public loginInvalid: boolean; 
   private returnUrl: string;
 
   constructor(
@@ -28,8 +28,8 @@ export class LoginComponent implements OnInit {
     private router: Router,
     private authService: AuthenticationService) { }
 
-    async ngOnInit() {
-      this.loginInvalid = false;
+      ngOnInit() {
+      this.loginInvalid = false; 
     this.returnUrl = this.route.snapshot.queryParams.returnUrl || '/selectCard';
 
     this.form = this.fb.group({
@@ -41,13 +41,14 @@ export class LoginComponent implements OnInit {
   }
 
     onSubmit() {
-    this.loginInvalid = false;
+    this.loginInvalid = false; 
        try {
-          if (this.form.invalid) {
-           return;
-         }
         const username = this.form.get('username').value;
         const password = this.form.get('password').value;
+        if (this.form.invalid) { 
+           return;
+         }
+       
            this.authService.login(username, password);
            this.router.navigate([this.returnUrl]);
 
