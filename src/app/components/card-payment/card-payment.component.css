@@ -1,3 +1,12 @@
+
+  .containerCard {
+    width: auto;
+    max-width: 90%;
+    max-height: 80%;
+    padding: 0 15px; 
+    margin-top: 5%;
+  }
+
 .card-columns {
     @include media-breakpoint-only(lg) {
       column-count: 4;

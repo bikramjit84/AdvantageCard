@@ -1,8 +1,8 @@
-<div class="login-form">
-    <form [formGroup]="form" (ngSubmit)="onSubmit()">
-        <h2 class="text-center">{{'login.bank' | translate}}</h2>    
-          
-        <div *ngIf="loginInvalid && !form.invalid" class="alert alert-danger">
+<div class="form-signin">
+    <form class="form-signin" [formGroup]="form" (ngSubmit)="onSubmit()">
+         <h1 class="h3 mb-3 font-weight-normal">{{'login.bank' | translate}}</h1>
+        
+         <div *ngIf="loginInvalid && !form.invalid" class="alert alert-danger">
             {{ loginFailure | translate }}
           </div>
           
@@ -32,6 +32,8 @@
         <div class="form-group">
             <button type="submit" class="btn btn-primary btn-block">{{loginBtn | translate}}</button>
         </div>     
-    </form>
+
+
+       </form>
  </div>
  

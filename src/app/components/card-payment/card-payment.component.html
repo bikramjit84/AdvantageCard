@@ -1,11 +1,5 @@
-  
-
-  <div class="row pay">
-   <div class="col-11" *ngIf="selectCard" class="alert float-center alert-danger">
-    {{ 'select.card' | translate }}
-  </div>
-  </div>
-  
+<div class="containerCard">  
+ 
 <div class="row">
     
     <div class="col-sm-3"  *ngFor="let card of cardDetailList; index as i;">
@@ -22,12 +16,11 @@
       </div>
     </div> 
   </div>
-  <div class="row">
-     <div class="col-11">
-      
+  <div> 
+     <div class="col-11" >
+       <label *ngIf="selectCard" class="alert float-center alert-danger" name="errorMsg"> {{ 'select.card' | translate }}</label>
       <input type="button" class="btn float-right pay btn-primary" value="Pay" (click)="pay()">
     </div>
  </div>
  
- 
- 
+</div>
