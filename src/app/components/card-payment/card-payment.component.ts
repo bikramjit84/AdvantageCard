@@ -13,7 +13,7 @@ import { AuthenticationService } from 'src/app/services/authentication.service';
 })
 export class CardPaymentComponent implements OnInit {
   private cardDetail = 'assets/cardDetail.json';
-  private typePriorityList: string[] = ['Platinium', 'Gold', 'Silver'];
+  private typePriorityList: string[] = ['Gold', 'Platinium' , 'Silver'];
   selectedBankIndex: string;
   amount: number;
   selectCard:boolean=  false;
@@ -95,7 +95,7 @@ export class CardPaymentComponent implements OnInit {
       var selectedCard:CardDetail = this.cardDetailList[this.selectedBankIndex];
       console.log("Selected Card is : " , selectedCard.type, selectedCard.cardNumber, selectedCard.score );
 
-      alert("Selected Card is : " +  selectedCard.type + ": No :" + selectedCard.cardNumber + ", Points:" + selectedCard.score)
+//      alert("Selected Card is : " +  selectedCard.type + ": No :" + selectedCard.cardNumber + ", Points:" + selectedCard.score)
       this.authService.logout("paymentResult"); 
     }
      
