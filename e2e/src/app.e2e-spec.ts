@@ -86,6 +86,7 @@ describe('workspace-project App', () => {
   
     expect( page.payClickAfterSelectingCardAndCheckMsg()).toEqual("Payment successful and redirecting back to the Merchant website. Do not close or refresh the browser");
   });
+  
 
   afterEach(async () => {
     // Assert that there are no errors emitted from the browser

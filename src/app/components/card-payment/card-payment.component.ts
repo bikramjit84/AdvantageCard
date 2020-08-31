@@ -13,7 +13,7 @@ import { AuthenticationService } from 'src/app/services/authentication.service';
 })
 export class CardPaymentComponent implements OnInit {
   private cardDetail = 'assets/cardDetail.json';
-  private typePriorityList: string[] = ['Gold', 'Platinium' , 'Silver'];
+  private typePriorityList: string[] = [ 'Platinium','Gold', , 'Silver'];
   selectedBankIndex: string;
   amount: number;
   selectCard:boolean=  false;

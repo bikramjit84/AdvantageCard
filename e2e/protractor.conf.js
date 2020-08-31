@@ -3,6 +3,9 @@
 // https://github.com/angular/protractor/blob/master/lib/config.ts
 
 const { SpecReporter } = require('jasmine-spec-reporter');
+var jasmineReporters = require('jasmine-reporters');
+
+var HtmlReporter = require('protractor-beautiful-reporter');
 
 /**
  * @type { import("protractor").Config }
@@ -30,6 +33,9 @@ exports.config = {
     require('ts-node').register({
       project: require('path').join(__dirname, './tsconfig.json')
     });
-    jasmine.getEnv().addReporter(new SpecReporter({ spec: { displayStacktrace: true } }));
+    jasmine.getEnv().addReporter(new HtmlReporter({
+      baseDirectory: 'tmp/screenshots'
+   }).getJasmine2Reporter());
+
   }
 };
